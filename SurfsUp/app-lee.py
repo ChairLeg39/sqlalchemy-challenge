@@ -155,6 +155,27 @@ def temp_stats_from_range(start, end):
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
-
+    # Perform a query to find the temperature statistics between the start and end dates
+    results = session.query(func.min(Measurement.tobs),
+                    func.avg(Measurement.tobs),
+                    func.max(Measurement.tobs)).\
+                    filter(Measurement.date >= start).\
+                    filter(Measurement.date <= end).all()
+                    
+    # Close the session
+    session.close()
+    
+    # Create a dictionary to hold the results
+    temp_stats = {
+        "Start Date": start,
+        "End Date": end,
+        "Min Temp": results[0][0],
+        "Avg Temp": round(results[0][1], 1),
+        "Max Temp": results[0][2]
+    }
+    
+    # Return the JSON representation of the dictionary
+    return jsonify(temp_stats)
+                    
 if __name__ == '__main__':
     app.run(debug=True)
