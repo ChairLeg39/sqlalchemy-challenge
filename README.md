@@ -52,6 +52,15 @@ This section analyzes the station data to understand observation counts and temp
 
 ## Climate App - Part 2 ☁️
 
+### Flask API Endpoints 📍
+To interact with the Flask API, navigate to the following routes:
+- `/`: Home page listing all routes.
+- `/api/v1.0/precipitation`: JSON representation of the last year's precipitation data.
+- `/api/v1.0/stations`: JSON list of all the weather stations.
+- `/api/v1.0/tobs`: JSON list of Temperature Observations for the most active station over the past year.
+- `/api/v1.0/<start>`: JSON list of temperature statistics from a start date to the present.
+- `/api/v1.0/<start>/<end>`: JSON list of temperature statistics between specific start and end dates.
+
 ### API SQLite Connection & Landing Page 🌐
 The backend setup for the Flask API involves:
 - **Database Engine**: Creation of the SQLAlchemy engine connected to the `hawaii.sqlite` database file. This engine serves as the foundation for further data operations.
@@ -70,15 +79,6 @@ Endpoints providing access to static data:
 Endpoints that respond to user input:
 - **/api/v1.0/<start>**: Accepts a start date from the URL and returns JSON formatted minimum, maximum, and average temperatures from the start date to the end of the dataset. This dynamic input allows users to customize the period of their climate analysis.
 - **/api/v1.0/<start>/<end>**: Takes both start and end dates as parameters from the URL and calculates the minimum, maximum, and average temperatures for the given period, providing a targeted analysis over a specific timeframe.
-
-### Flask API Endpoints 📍
-To interact with the Flask API, navigate to the following routes:
-- `/`: Home page listing all routes.
-- `/api/v1.0/precipitation`: JSON representation of the last year's precipitation data.
-- `/api/v1.0/stations`: JSON list of all the weather stations.
-- `/api/v1.0/tobs`: JSON list of Temperature Observations for the most active station over the past year.
-- `/api/v1.0/<start>`: JSON list of temperature statistics from a start date to the present.
-- `/api/v1.0/<start>/<end>`: JSON list of temperature statistics between specific start and end dates.
 
 ## Conclusion 🏁
 
