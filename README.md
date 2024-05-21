@@ -38,7 +38,7 @@ This analysis focuses on precipitation data over the last year:
 - **Plotting**: The data is plotted using the DataFrame's `.plot()` method, which visualizes the precipitation over time, with date on the x-axis and precipitation on the y-axis.
 - **Statistics**: Summary statistics for the precipitation data are printed using Pandas, providing insights into the central tendency and dispersion of precipitation values.
 - **Data Visualization**:
-  ![Precipitation Analysis](last_year_prcp.png)
+  ![Precipitation Analysis](SurfsUp/Plots/last_year_prcp.png)
 
 ### Station Analysis 📊
 This section analyzes the station data to understand observation counts and temperature measurements:
@@ -48,7 +48,7 @@ This section analyzes the station data to understand observation counts and temp
 - **TOBS Query**: This query fetches the last 12 months of temperature observation data (TOBS) for the most active station, focusing on the station with the highest observation count to ensure data reliability and relevance.
 - **Histogram Plotting**: The results are saved into a DataFrame and then plotted as a histogram with 12 bins to visually represent the distribution of temperature observations over the last year, providing an intuitive understanding of temperature trends and variations.
 - **Data Visualization**:
-  ![Station Temperature Histogram](action_station_temp_hist.png)
+  ![Station Temperature Histogram](SurfsUp/Plots/action_station_temp_hist.png)
 
 ## Climate App - Part 2 ☁️
 
