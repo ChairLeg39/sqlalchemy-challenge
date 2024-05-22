@@ -167,7 +167,7 @@ def temp_stats_from_range(start, end):
     
     # Create a dictionary to hold the results
     temp_stats = {
-        "1Start Date": start,
+        "Start Date": start,
         "End Date": end,
         "Min Temp": results[0][0],
         "Avg Temp": round(results[0][1], 1),
